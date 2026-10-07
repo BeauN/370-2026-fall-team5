@@ -12,7 +12,7 @@
             <Button mnemonicParsing="false" onAction="#onUploadClick" prefHeight="25.0" prefWidth="146.0" text="Upload from Computer" />
             <Button disable="true" mnemonicParsing="false" text="Use Camera" />
             <ImageView fx:id="receiptImageView" fitHeight="447.0" fitWidth="330.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="continueButton" disable="true" mnemonicParsing="false" text="Continue" />
+            <Button fx:id="continueButton" disable="true" mnemonicParsing="false" onAction="#onContinueClick" text="Continue" />
          </children>
       </VBox>
    </children>

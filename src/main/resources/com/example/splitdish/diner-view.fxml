@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.splitdish.DinerController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="58.0" layoutY="102.0" prefHeight="600.0" prefWidth="100.0" spacing="15.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label text="Add Diners" />
+            <TextField fx:id="dinerNameField" promptText="Enter diner name" />
+            <Button mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+            <ListView fx:id="dinerListView" prefHeight="200.0" prefWidth="200.0" />
+            <Button mnemonicParsing="false" onAction="#onRemoveClick" text="Remove" />
+            <Button mnemonicParsing="false" onAction="#onContinueClick" text="Continue" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

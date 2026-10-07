@@ -11,15 +11,15 @@
             <TextField fx:id="restaurantNameField" promptText="Restaurant Name" />
             <TableView fx:id="itemTable" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn prefWidth="240.0" text="Item" />
-                <TableColumn prefWidth="100.0" text="Price" />
+                <TableColumn fx:id="itemColumn" prefWidth="240.0" text="Item" />
+                <TableColumn fx:id="priceColumn" prefWidth="100.0" text="Price" />
               </columns>
             </TableView>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" text="Add" />
-                  <Button mnemonicParsing="false" text="Edit" />
-                  <Button mnemonicParsing="false" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#onEditClick" text="Edit" />
+                  <Button mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
@@ -34,6 +34,7 @@
                   <TextField fx:id="totalField" />
                </children>
             </HBox>
+            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#onContinueClick" text="Continue" />
          </children>
       </VBox>
    </children>

@@ -6,6 +6,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import java.io.IOException;
 
 public class ReceiptSourceController {
     @FXML
@@ -40,5 +43,21 @@ public class ReceiptSourceController {
             continueButton.setDisable(false);
         }
     }
+
+    @FXML
+    protected void onContinueClick() {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("receipt-review-view.fxml")
+            );
+            Scene scene = new Scene(loader.load(), 390, 700);
+
+            Stage stage = (Stage)continueButton.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
